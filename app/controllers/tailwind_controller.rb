@@ -1,0 +1,2 @@
+class TailwindController < ApplicationController
+end
