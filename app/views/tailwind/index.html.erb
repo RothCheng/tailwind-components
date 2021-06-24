@@ -1,20 +1,7 @@
 <div class="flex h-screen p-10">
   <div class="flex-none w-1/5"></div>
   <div class="flex-grow">
-    <article class="mb-10">
-      <h2 class="text-2xl mb-3">Flex: 上下固定，中间网格适配</h2>
-      <div class="container w-1/2 h-56 m-auto mb-3">
-        <div class="flex flex-col h-full border-4">
-          <div class="bg-green-400 flex-none h-1/6 m-1"></div>
-          <div class="flex h-full">
-            <div class="bg-green-400 flex-none w-1/5 m-1"></div>
-            <div class="bg-green-400 flex-1 m-1"></div>
-            <div class="bg-green-400 flex-none w-1/5 m-1"></div>
-          </div>
-          <div class="bg-green-400 flex-none h-1/6 m-1"></div>
-        </div>
-      </div>
-      <pre>源代码将会在这里展示</pre>
-    </article>
+    <%= render partial: 'tailwind/components/layouts/layout1.html.erb' %>
+    <%= render partial: 'tailwind/components/layouts/layout2.html.erb' %>
   </div>
 </div>
