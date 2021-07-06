@@ -12,3 +12,5 @@ import '../plugins/tailwind';
 // Rails.start()
 // Turbolinks.start()
 ActiveStorage.start()
+
+import "controllers"

@@ -16,12 +16,15 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+  <div class="rich-text flex" data-controller="rich-text" data-rich-text-default-value="<%= @page.content %>">
+    <div class="rich-text__edit border-dashed border-2 flex-1">
+      <%= form.text_area :content, rows: 30, data: { 'rich-text-target': 'input', 'action': 'input->rich-text#sync' }, class: 'w-full' %>
+    </div>
+
+    <div class="rich-text__preview border-double border-2 flex-1" data-rich-text-target="output"></div>
   </div>
 
-  <div class="actions">
+
     <%= form.submit %>
   </div>
 <% end %>

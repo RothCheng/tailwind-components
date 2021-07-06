@@ -1,28 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pages222</h1>
+<h1>Pages</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @pages.each do |page| %>
+  <div class="page-<%= page.id %>">
+    <h2 class="text-2xl mb-3">
+      <%= page.id %> .
+      <%= page.title %>
 
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.title %></td>
-        <td><%= page.content %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <%= link_to 'Show', page %>
+      <%= link_to 'Edit', edit_page_path(page) %>
+      <%#= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </h2>
+    <%= page.content.html_safe %>
+  </div>
+<% end %>
 
 <br>
 
